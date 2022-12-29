@@ -50,21 +50,16 @@ const switchPlayer = function () {
 
 // Roll the die
 btnRoll.addEventListener("click", function () {
-  // 1. Generate a random die roll
   if (playing) {
     const dice = Math.trunc(Math.random() * 6) + 1;
     console.log(dice);
-    // 2. Display die
     diceEl.classList.remove("hidden");
     diceEl.src = `dice-${dice}.png`;
-    // 3. Chech for rolled 1, it 1 switch to the next player
     if (dice !== 1) {
-      // Add to score
       currentScore = currentScore + dice;
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
     } else {
-      // switch to the next player
       switchPlayer();
     }
   }
@@ -72,12 +67,10 @@ btnRoll.addEventListener("click", function () {
 
 btnHold.addEventListener("click", function () {
   if (playing) {
-    // 1. Add current score to active player's score
     scores[activePlayer] = scores[activePlayer] + currentScore;
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    // 2. chack if score is >= 100
     if (scores[activePlayer] >= 100) {
       playing = false;
       document

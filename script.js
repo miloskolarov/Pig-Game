@@ -45,3 +45,20 @@ btnRoll.addEventListener("click", function () {
     player1El.classList.toggle("player--active");
   }
 });
+
+btnHold.addEventListener("click", function () {
+  // 1. Add current score to active player's score
+  scores[activePlayer] = scores[activePlayer] + currentScore;
+  document.getElementById(`score--${activePlayer}`).textContent =
+    scores[activePlayer];
+  // put this code in function, it is reused
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle("player--active");
+  player1El.classList.toggle("player--active");
+
+  // 2. chack if score is >= 100
+  // finish the hame
+  // if not, switch player
+});

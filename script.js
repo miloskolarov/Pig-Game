@@ -44,8 +44,8 @@ const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
-  player0E.classList.toggle("player--active");
-  player1E.classList.toggle("player--active");
+  player0El.classList.toggle("player--active");
+  player1El.classList.toggle("player--active");
 };
 
 // Roll the die

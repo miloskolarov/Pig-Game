@@ -3,6 +3,9 @@
 // Select the elements:
 const score0El = document.querySelector("#score--0");
 const score1El = document.querySelector("#score--1");
+const current0El = document.querySelector("#current--0");
+const current1El = document.querySelector("#current--1");
+
 const diceEl = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
@@ -26,6 +29,8 @@ btnRoll.addEventListener("click", function () {
   // 3. Chech for rolled 1, it 1 switch to the next player
   if (dice !== 1) {
     // Add to score
+    currentScore = currentScore + dice;
+    current0El.textContent = currentScore; /* CHANGE!*/
   } else {
     // switch to the next player
   }

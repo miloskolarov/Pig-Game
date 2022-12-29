@@ -19,7 +19,7 @@ In this project, I have recreated the Pig Game using HTML, CSS, and JavaScript. 
 ### a. Live-preview
 
 The Pig Game can be accessed on GitHub Pages by following the link:
-[na](na)
+[ https://miloskolarov.github.io/Pig-Game](https://miloskolarov.github.io/Pig-Game)
 
 ### b. Downloading a local copy
 
